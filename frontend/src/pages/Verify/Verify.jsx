@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { StoreContext } from '../../Context/StoreContext';
+import { StoreContext } from '../../context/StoreContext';
 import './Verify.css';
 
 const Verify = () => {
@@ -21,7 +21,7 @@ const Verify = () => {
       }
     } catch (error) {
       console.error("Error verifying payment:", error);
-      // 可以导航到错误页面或者显示错误信息
+      // 可You can navigate to the error page or display an error message
       navigate("/error");
     }
   };
@@ -32,7 +32,7 @@ const Verify = () => {
     } else {
       navigate("/");
     }
-    // 将 success 和 orderId 放入依赖项中，确保未来如果逻辑变化可以处理
+    // Put success and orderId into the dependencies to ensure they can be handled in the future if the logic changes
   }, [success, orderId, navigate]);
 
   return (

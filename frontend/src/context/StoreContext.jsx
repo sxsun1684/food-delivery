@@ -46,17 +46,13 @@ const StoreContextProvider = ({children}) => {
             console.error("Error fetching food list:", error);
         }
     };
-    // const fetchFoodList = async () => {
-    //     const response = await axios.get(url + "/api/food/list");
-    //     setFoodList(response.data.data)
-    // }
+    
     
     useEffect(() => {
         async function loadData() {
             await fetchFoodList();
             if (localStorage.getItem("token")) {
                 setToken(localStorage.getItem("token"))
-                // await loadCartData({ token: localStorage.getItem("token") })
             }
             
         }

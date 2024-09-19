@@ -17,34 +17,34 @@ const placeOrder = async (req, res) => {
 
         const line_items = req.body.items.map((item) => ({
             price_data: {
-              currency: "inr",
-              product_data: {
-                name: item.name
-              },
-              unit_amount: item.price*100*80
+                currency: "inr",
+                product_data: {
+                    name: item.name
+                },
+                unit_amount: item.price * 100 * 80
             },
             quantity: item.quantity
-          }))
+        }))
 
         line_items.push({
-            price_data:{
-                currency:"inr",
-                product_data:{
-                    name:"Delivery Charge"
+            price_data: {
+                currency: "inr",
+                product_data: {
+                    name: "Delivery Charge"
                 },
-                unit_amount: 5*80*100
+                unit_amount: 5 * 80 * 100
             },
-            quantity:1
+            quantity: 1
         })
-        
-          const session = await stripe.checkout.sessions.create({
+
+        const session = await stripe.checkout.sessions.create({
             success_url: `http://localhost:5173/verify?success=true&orderId=${newOrder._id}`,
             cancel_url: `http://localhost:5173/verify?success=false&orderId=${newOrder._id}`,
             line_items: line_items,
             mode: 'payment',
-          });
-      
-          res.json({success:true,session_url:session.url});
+        });
+
+        res.json({ success: true, session_url: session.url });
 
     } catch (error) {
         console.log(error);
@@ -86,13 +86,13 @@ const updateStatus = async (req, res) => {
 }
 
 const verifyOrder = async (req, res) => {
-    const {orderId , success} = req.body;
+    const { orderId, success } = req.body;
     try {
-        if (success==="true") {
+        if (success === "true") {
             await orderModel.findByIdAndUpdate(orderId, { payment: true });
             res.json({ success: true, message: "Paid" })
         }
-        else{
+        else {
             await orderModel.findByIdAndDelete(orderId)
             res.json({ success: false, message: "Not Paid" })
         }
@@ -102,4 +102,4 @@ const verifyOrder = async (req, res) => {
 
 }
 
-export { placeOrder, listOrders, userOrders, updateStatus ,verifyOrder }
+export { placeOrder, listOrders, userOrders, updateStatus, verifyOrder }

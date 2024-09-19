@@ -28,4 +28,3 @@ app.get ('/', (req, res) => {
 app.listen(port,()=>{
     console.log (`sever started:${port}`);
 })
-//mongodb+srv://sxsun1684:31415926dog@cluster0.zwaaygv.mongodb.net/?
