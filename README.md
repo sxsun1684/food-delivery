@@ -90,13 +90,13 @@ npm start
 
 - **Backend**: The backend serves RESTful APIs to handle CRUD operations for menu items, orders, and users. It also handles authentication and integrates with Stripe for payment processing.
 
-![Homepage](Image_1.png)
+![Homepage](pics/Image_1.png)
 
-![Check out system](Image_2.png)
+![Check out system](pics/Image_2.png)
 
-![Check the list by Admin](Image_3.png)
+![Check the list by Admin](pics/Image_3.png)
 
-![Launch new products by Admin](Image_4.png)
+![Launch new products by Admin](pics/Image_4.png)
 
 ## **API Endpoints**
 
