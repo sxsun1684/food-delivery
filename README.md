@@ -183,12 +183,12 @@ Admin Features
 
 
 Future Enhancements
-`Real-time Notifications``: Integrate WebSockets to notify users about order status updates in real-time.`
+`Real-time Notifications`: Integrate WebSockets to notify users about order status updates in real-time.`
 
-`Review System``: Allow users to leave reviews for menu items.`
+`Review System`: Allow users to leave reviews for menu items.`
 
-`Multi-language Support``: Implement language localization for broader user reach.`
+`Multi-language Support`: Implement language localization for broader user reach.`
 
-`AI-Based Recommendations``: Provide personalized menu recommendations based on user preferences.`
+`AI-Based Recommendations`: Provide personalized menu recommendations based on user preferences.`
 
 
