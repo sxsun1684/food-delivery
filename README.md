@@ -163,26 +163,23 @@ npm start
   "status": "String"
 }
 ```
-## ```
-Authentication
+## Authentication
 JWT tokens are used for user authentication.
 `Tokens are generated upon login and sent with every protected route as part of the ``Authorization`` header.`
 
 
-Stripe Integration
-`Stripe`` is used for processing payments.`
-
-The payment flow is integrated into the order placement process.
-`A Stripe secret key is required in the ``.env`` file.`
+- Stripe Integration
+`Stripe` is used for processing payments.
+`The payment flow is integrated into the order placement process. A Stripe secret key is required in the `.env` file.
 
 
-Admin Features
-`Menu Management``: Admin users can add, update, or remove menu items.`
+- Admin Features
+`Menu Management`: Admin users can add, update, or remove menu items.`
 
-`Order Management``: Admins can view all orders and change their status (e.g., from "Pending" to "Delivered").`
+`Order Management`: Admins can view all orders and change their status (e.g., from "Pending" to "Delivered").`
 
 
-Future Enhancements
+- Future Enhancements
 `Real-time Notifications`: Integrate WebSockets to notify users about order status updates in real-time.`
 
 `Review System`: Allow users to leave reviews for menu items.`
